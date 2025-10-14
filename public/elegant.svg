@@ -1,0 +1,15 @@
+<svg width="76" height="77" viewBox="0 0 76 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="76" height="77" rx="4" fill="#1A1A2E"/>
+<rect x="10" y="10" width="56" height="57" fill="url(#elegantGradient)" rx="2"/>
+<path d="M38 20L48 35H28L38 20Z" fill="#FFD700" stroke="#E6C200" stroke-width="1"/>
+<circle cx="38" cy="45" r="8" fill="none" stroke="#FFD700" stroke-width="2"/>
+<circle cx="38" cy="45" r="4" fill="#FFD700"/>
+<rect x="20" y="25" width="36" height="1" fill="#666"/>
+<rect x="20" y="55" width="36" height="1" fill="#666"/>
+<defs>
+<linearGradient id="elegantGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#16213E"/>
+<stop offset="100%" style="stop-color:#0F3460"/>
+</linearGradient>
+</defs>
+</svg>
