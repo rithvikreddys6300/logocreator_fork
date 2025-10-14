@@ -43,6 +43,9 @@ const logoStyles = [
   { name: "Organic", icon: "/organic.svg" },
   { name: "Geometric", icon: "/geometric.svg" },
   { name: "Handcrafted", icon: "/handcrafted.svg" },
+  { name: "Futuristic", icon: "/futuristic.svg" },
+  { name: "Corporate", icon: "/corporate.svg" },
+  { name: "Artistic", icon: "/artistic.svg" },
 ];
 
 const primaryColors = [

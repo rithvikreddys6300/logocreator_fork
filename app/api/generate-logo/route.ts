@@ -109,7 +109,10 @@ export async function POST(req: Request) {
     Bold: "Bold, strong, impactful, powerful with heavy typography, striking design, commanding presence, confident appearance, dynamic and forceful.",
     Organic: "Organic, natural, flowing, earth-toned with organic shapes, biomorphic forms, sustainable design, eco-friendly appearance, nature-inspired elements.",
     Geometric: "Geometric, mathematical, structured, precise with geometric patterns, symmetrical design, clean angles, systematic layout, architectural precision.",
-    Handcrafted: "Handcrafted, artisanal, personal, custom with hand-drawn elements, authentic feel, crafted appearance, unique character, human touch."
+    Handcrafted: "Handcrafted, artisanal, personal, custom with hand-drawn elements, authentic feel, crafted appearance, unique character, human touch.",
+    Futuristic: "Futuristic, sci-fi inspired, high-tech, innovative with neon accents, cyberpunk aesthetic, digital elements, holographic effects, advanced technology feel, space-age design.",
+    Corporate: "Corporate, professional, trustworthy, business-focused with clean lines, authoritative appearance, enterprise-grade design, institutional feel, reliable and established.",
+    Artistic: "Artistic, creative, expressive, colorful with painterly effects, brushstroke textures, vibrant palette, imaginative design, gallery-worthy aesthetic, fine art inspiration."
   };
 
   const prompt = dedent`A single logo, high-quality, award-winning professional design, made for both digital and print media, only contains a few vector shapes, ${styleLookup[data.selectedStyle]}

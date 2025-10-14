@@ -1,0 +1,59 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Artistic design with painterly and creative elements -->
+  <rect width="96" height="96" fill="#fff8f0" rx="8"/>
+  
+  <!-- Paint brush strokes -->
+  <g opacity="0.8">
+    <!-- Background brushstroke -->
+    <path d="M15 25 Q35 20 50 35 T80 30" stroke="#ff6b6b" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M20 50 Q40 45 55 60 T85 55" stroke="#4ecdc4" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M25 70 Q45 65 60 80 T90 75" stroke="#ffe66d" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.6"/>
+  </g>
+  
+  <!-- Artist palette -->
+  <ellipse cx="40" cy="45" rx="20" ry="15" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Paint colors on palette -->
+  <g>
+    <circle cx="32" cy="40" r="3" fill="#ff6b6b"/>
+    <circle cx="40" cy="37" r="3" fill="#4ecdc4"/>
+    <circle cx="48" cy="40" r="3" fill="#ffe66d"/>
+    <circle cx="35" cy="48" r="3" fill="#a8e6cf"/>
+    <circle cx="45" cy="48" r="3" fill="#ff8b94"/>
+  </g>
+  
+  <!-- Paint brush -->
+  <g transform="translate(55, 30) rotate(45)">
+    <!-- Brush handle -->
+    <rect x="0" y="2" width="20" height="3" fill="#8b4513" rx="1.5"/>
+    <rect x="18" y="1.5" width="4" height="4" fill="#d2691e" rx="2"/>
+    
+    <!-- Brush bristles -->
+    <rect x="22" y="0" width="8" height="1.5" fill="#2c3e50" rx="0.75"/>
+    <rect x="22" y="1.5" width="8" height="2" fill="#34495e" rx="1"/>
+    <rect x="22" y="3.5" width="8" height="2" fill="#2c3e50" rx="1"/>
+    <rect x="22" y="5.5" width="8" height="1.5" fill="#34495e" rx="0.75"/>
+  </g>
+  
+  <!-- Paint drops/splatters for artistic feel -->
+  <g fill="#ff6b6b" opacity="0.4">
+    <circle cx="70" cy="25" r="2"/>
+    <circle cx="75" cy="28" r="1.5"/>
+    <circle cx="72" cy="31" r="1"/>
+  </g>
+  
+  <g fill="#4ecdc4" opacity="0.4">
+    <circle cx="25" cy="75" r="1.5"/>
+    <circle cx="28" cy="78" r="2"/>
+    <circle cx="22" cy="78" r="1"/>
+  </g>
+  
+  <g fill="#ffe66d" opacity="0.4">
+    <circle cx="75" cy="65" r="1.5"/>
+    <circle cx="78" cy="68" r="1"/>
+    <circle cx="73" cy="70" r="2"/>
+  </g>
+  
+  <!-- Creative swirl element -->
+  <path d="M60 60 Q70 50 75 60 T80 65" stroke="#ff8b94" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+</svg>
