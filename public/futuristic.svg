@@ -1,0 +1,37 @@
+<svg width="76" height="77" viewBox="0 0 76 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Futuristic circuit-like design with neon colors -->
+  <rect width="76" height="77" fill="#343434" rx="4"/>
+  
+  <!-- Circuit board pattern -->
+  <g stroke="#00ffff" stroke-width="1.2" fill="none">
+    <!-- Main circuit lines -->
+    <path d="M12 16 H28 V26 H48 V16 H64" stroke-linecap="round"/>
+    <path d="M16 32 H32 V42 H44 V32 H60" stroke-linecap="round"/>
+    <path d="M12 48 H26 V58 H50 V48 H64" stroke-linecap="round"/>
+    
+    <!-- Connecting verticals -->
+    <path d="M28 26 V32" stroke-linecap="round"/>
+    <path d="M32 42 V48" stroke-linecap="round"/>
+    <path d="M44 32 V26" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Neon nodes -->
+  <g fill="#00ffff">
+    <circle cx="28" cy="26" r="1.5"/>
+    <circle cx="48" cy="16" r="1.5"/>
+    <circle cx="32" cy="42" r="1.5"/>
+    <circle cx="44" cy="32" r="1.5"/>
+  </g>
+  
+  <!-- Glowing center element -->
+  <circle cx="38" cy="38.5" r="6" fill="#ff0080" opacity="0.8"/>
+  <circle cx="38" cy="38.5" r="4" fill="#ffffff"/>
+  
+  <!-- Corner accent elements -->
+  <g stroke="#ff0080" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M10 10 L14 10 L14 14"/>
+    <path d="M62 10 L66 10 L66 14"/>
+    <path d="M10 63 L14 63 L14 67"/>
+    <path d="M62 63 L66 63 L66 67"/>
+  </g>
+</svg>
