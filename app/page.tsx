@@ -23,6 +23,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { domain } from "@/app/lib/domain";
 import InfoTooltip from "./components/InfoToolTip";
+import { saveLogoToHistory } from "@/app/lib/logoHistory";
 
 // const layouts = [
 //   { name: "Solo", icon: "/solo.svg" },
@@ -102,7 +103,19 @@ export default function Page() {
 
     if (res.ok) {
       const json = await res.json();
-      setGeneratedImage(`data:image/png;base64,${json.b64_json}`);
+      const imageData = `data:image/png;base64,${json.b64_json}`;
+      setGeneratedImage(imageData);
+      
+      // Save to history
+      saveLogoToHistory({
+        companyName,
+        style: selectedStyle,
+        primaryColor: selectedPrimaryColor,
+        backgroundColor: selectedBackgroundColor,
+        additionalInfo,
+        imageData,
+      });
+      
       await user.reload();
     } else if (res.headers.get("Content-Type") === "text/plain") {
       toast({

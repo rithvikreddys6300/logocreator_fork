@@ -7,6 +7,8 @@ import {
   UserButton,
   useUser,
 } from "@clerk/nextjs";
+import { HistoryIcon } from "lucide-react";
+import { Button } from "@/app/components/ui/button";
 import { domain } from "@/app/lib/domain";
 
 export default function Header({ className }: { className: string }) {
@@ -38,6 +40,12 @@ export default function Header({ className }: { className: string }) {
             />
           </SignedOut>
           <SignedIn>
+            <Link href="/dashboard">
+              <Button variant="ghost" size="sm" className="text-white hover:text-gray-300">
+                <HistoryIcon className="h-4 w-4 mr-2" />
+                History
+              </Button>
+            </Link>
             {user?.unsafeMetadata.remaining === "BYOK" ? (
               <p>Your API key</p>
             ) : (
