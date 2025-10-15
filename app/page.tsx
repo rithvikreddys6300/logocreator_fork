@@ -79,6 +79,7 @@ export default function Page() {
     backgroundColors[0].name,
   );
   const [additionalInfo, setAdditionalInfo] = useState("");
+  const [customPrompt, setCustomPrompt] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [generatedImage, setGeneratedImage] = useState("");
 
@@ -107,6 +108,7 @@ export default function Page() {
         selectedPrimaryColor,
         selectedBackgroundColor,
         additionalInfo,
+        customPrompt,
       }),
     });
 
@@ -122,6 +124,7 @@ export default function Page() {
         primaryColor: selectedPrimaryColor,
         backgroundColor: selectedBackgroundColor,
         additionalInfo,
+        customPrompt,
         imageData,
       });
       
@@ -313,7 +316,7 @@ export default function Page() {
                   {/* Additional Options Section */}
                   <div className="mb-1">
                     <div className="mt-1">
-                      <div className="mb-1">
+                      <div className="mb-4">
                         <label
                           htmlFor="additional-info"
                           className="mb-2 flex items-center text-xs font-bold uppercase text-[#6F6F6F]"
@@ -326,6 +329,27 @@ export default function Page() {
                           onChange={(e) => setAdditionalInfo(e.target.value)}
                           placeholder="Enter additional information"
                         />
+                      </div>
+                      {/* Custom Prompt Section */}
+                      <div className="mb-1">
+                        <label
+                          htmlFor="custom-prompt"
+                          className="mb-2 flex items-center text-xs font-bold uppercase text-[#6F6F6F]"
+                        >
+                          Custom Prompt
+                          <InfoTooltip content="Provide a detailed description of exactly how you want your logo to look. This will override other style selections." />
+                        </label>
+                        <Textarea
+                          id="custom-prompt"
+                          value={customPrompt}
+                          onChange={(e) => setCustomPrompt(e.target.value)}
+                          placeholder="e.g., 'A minimalist logo with a mountain silhouette and geometric shapes, using navy blue and gold colors, with clean typography...'"
+                          className="min-h-[100px]"
+                          maxLength={500}
+                        />
+                        <div className="mt-1 text-xs text-[#6F6F6F]">
+                          {customPrompt.length}/500 characters
+                        </div>
                       </div>
                     </div>
                   </div>

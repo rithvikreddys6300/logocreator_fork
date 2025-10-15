@@ -6,6 +6,7 @@ export interface LogoHistoryItem {
   primaryColor: string;
   backgroundColor: string;
   additionalInfo?: string;
+  customPrompt?: string;
   imageData: string; // base64 encoded image
   createdAt: string; // ISO date string
 }

@@ -24,6 +24,7 @@ export async function POST(req: Request) {
       selectedPrimaryColor: z.string(),
       selectedBackgroundColor: z.string(),
       additionalInfo: z.string().optional(),
+      customPrompt: z.string().optional(),
     })
     .parse(json);
 
@@ -115,9 +116,29 @@ export async function POST(req: Request) {
     Artistic: "Artistic, creative, expressive, colorful with painterly effects, brushstroke textures, vibrant palette, imaginative design, gallery-worthy aesthetic, fine art inspiration."
   };
 
-  const prompt = dedent`A single logo, high-quality, award-winning professional design, made for both digital and print media, only contains a few vector shapes, ${styleLookup[data.selectedStyle]}
+  // Function to sanitize user input to prevent injection attacks
+  const sanitizeInput = (input: string): string => {
+    return input
+      .replace(/[<>]/g, '') // Remove angle brackets
+      .replace(/script/gi, '') // Remove script tags (case insensitive)
+      .replace(/javascript:/gi, '') // Remove javascript: protocol
+      .replace(/on\w+=/gi, '') // Remove event handlers
+      .trim()
+      .substring(0, 1000); // Limit length
+  };
 
-  Primary color is ${data.selectedPrimaryColor.toLowerCase()} and background color is ${data.selectedBackgroundColor.toLowerCase()}. The company name is ${data.companyName}, make sure to include the company name in the logo. ${data.additionalInfo ? `Additional info: ${data.additionalInfo}` : ""}`;
+  // Use custom prompt if provided (and not empty), otherwise construct from style/color selections
+  let prompt: string;
+  if (data.customPrompt && data.customPrompt.trim().length > 0) {
+    const sanitizedCustomPrompt = sanitizeInput(data.customPrompt);
+    prompt = dedent`${sanitizedCustomPrompt}
+
+    The company name is ${data.companyName}, make sure to include the company name in the logo. ${data.additionalInfo ? `Additional info: ${sanitizeInput(data.additionalInfo)}` : ""}`;
+  } else {
+    prompt = dedent`A single logo, high-quality, award-winning professional design, made for both digital and print media, only contains a few vector shapes, ${styleLookup[data.selectedStyle]}
+
+    Primary color is ${data.selectedPrimaryColor.toLowerCase()} and background color is ${data.selectedBackgroundColor.toLowerCase()}. The company name is ${data.companyName}, make sure to include the company name in the logo. ${data.additionalInfo ? `Additional info: ${sanitizeInput(data.additionalInfo)}` : ""}`;
+  }
 
   try {
     const response = await client.images.create({
