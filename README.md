@@ -7,6 +7,15 @@
   An open source logo generator – create professional logos in seconds with customizable styles.
 </p>
 
+## Features
+
+- **Professional Logo Generation**: Create high-quality logos in seconds using AI
+- **Multiple Style Options**: Choose from 15 different logo styles (Tech, Modern, Vintage, etc.)
+- **Color Customization**: Select primary and background colors for your logo
+- **Custom Prompt Input**: Provide detailed descriptions for exactly how you want your logo to look
+- **Additional Information**: Add context about your business for better logo generation
+- **User Dashboard**: View and manage your logo generation history
+
 ## Tech stack
 
 - [Flux Pro 1.1](https://togetherai.link/flux-playground) on [Together AI](https://togetherai.link/) for logo generation
